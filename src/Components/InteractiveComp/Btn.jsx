@@ -1,9 +1,11 @@
 import React from "react";
 
-const Btn = ({ btnName, cssClass }) => {
+const Btn = ({ btnName, cssClass, onToggle }) => {
   return (
     <>
-      <button className={`btn ${cssClass}`}> {btnName}</button>
+      <button className={`btn ${cssClass}`} onClick={onToggle}>
+        {btnName}
+      </button>
     </>
   );
 };
