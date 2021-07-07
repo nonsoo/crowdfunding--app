@@ -1,0 +1,54 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Fonts */
+  --ff-prmy: "Commissioner", sans-serif;
+
+  /* Font Size */
+  --fs-prmy: 1rem;
+  --fs-sec: 1.25rem;
+  --fs-tri: 2rem;
+
+  /* font weights */
+  --fw-prmy: 400;
+  --fw-sec: 500;
+  --fw-tri: 700;
+
+  /* Colours */
+  --col-Prmy-mod: hsl(176, 50%, 47%);
+  --col-Prmy-dark: hsl(176, 72%, 28%);
+  --col-Neu-black: hsl(0, 0%, 0%);
+  --col-Neu-dark: hsl(0, 0%, 48%);
+
+  --background-col: #f9f9f9;
+
+  /* Font Colours */
+  --fcol-prmy: #ffffff;
+  --fcol-sec: #000000;
+}
+
+.Funding--site {
+  max-width: 1400px;
+  min-width: 350px;
+  width: 100%;
+
+  font-size: var(--fs-prmy);
+  font-family: var(--ff-prmy);
+  font-weight: var(--fw-prmy);
+
+  color: var(--fcol-sec);
+  background-color: var(--background-col);
+}
+
+.mainContent {
+  margin: 0 auto;
+  margin-top: 3rem;
+  padding: 3rem;
+  width: 100%;
+}

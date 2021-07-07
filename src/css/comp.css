@@ -1,0 +1,31 @@
+.NavHeaderCon {
+  display: flex;
+  justify-content: space-between;
+
+  width: 100vw;
+  height: 600px;
+  padding: 0 3rem;
+
+  background-image: url(../imgs/image-hero-desktop.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.NavItems {
+  display: flex;
+  gap: 2.25rem;
+}
+
+.NavTitle,
+.NavItems__Item {
+  color: var(--fcol-prmy);
+  margin-top: 1.75rem;
+}
+.NavTitle {
+  font-size: var(--fs-sec);
+  font-weight: var(--fw-tri);
+}
+
+.NavItems__Item {
+  cursor: pointer;
+}
