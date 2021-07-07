@@ -5,7 +5,7 @@ import companyLogo from "../imgs/logo-mastercraft.svg";
 
 const ItemHeaderComp = () => {
   return (
-    <section className="itemHeaderComp">
+    <section className="itemHeaderComp mainPageComp">
       <img
         className="itemHeaderComp__Img"
         src={companyLogo}
