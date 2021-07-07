@@ -28,4 +28,14 @@
 
 .NavItems__Item {
   cursor: pointer;
+  font-weight: var(--fw-sec);
+}
+
+.btn {
+  border: none;
+
+  padding: 2em 3em;
+
+  border-radius: 16px;
+  cursor: pointer;
 }

@@ -13,7 +13,7 @@
   /* Font Size */
   --fs-prmy: 1rem;
   --fs-sec: 1.25rem;
-  --fs-tri: 2rem;
+  --fs-tri: 2.25rem;
 
   /* font weights */
   --fw-prmy: 400;
@@ -28,9 +28,16 @@
 
   --background-col: #f9f9f9;
 
+  --background-col-sec: #ffffff;
+
   /* Font Colours */
   --fcol-prmy: #ffffff;
   --fcol-sec: #000000;
+  --fcol-tri: #8b8b8b;
+
+  /* other */
+
+  --boxShadow-prmy: 0 3px 6px 1px rgba(23, 23, 23, 0.06);
 }
 
 .Funding--site {
@@ -40,7 +47,7 @@
   font-family: var(--ff-prmy);
   font-weight: var(--fw-prmy);
 
-  color: var(--fcol-sec);
+  color: var(--fcol-tri);
   background-color: var(--background-col);
 }
 
@@ -51,6 +58,34 @@
   margin-top: 3rem;
   padding: 3rem;
   width: 100%;
+}
 
-  border: 1px solid black;
+.itemHeaderComp {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+
+  width: 80%;
+  background-color: var(--background-col-sec);
+  box-shadow: var(--boxShadow-prmy);
+
+  padding: 2rem;
+
+  margin: 0 auto;
+}
+
+.itemHeaderComp__Img {
+  transform: translateY(-100%);
+  width: 7%;
+}
+
+.itemHeader__Title {
+  font-size: var(--fs-tri);
+  font-weight: var(--fw-tri);
+  color: var(--fcol-sec);
+}
+
+.itemHeaderBtnContainer {
+  align-self: flex-start;
 }
