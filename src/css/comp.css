@@ -38,4 +38,13 @@
 
   border-radius: 16px;
   cursor: pointer;
+
+  background-color: var(--col-Prmy-mod);
+  color: var(--fcol-prmy);
+}
+
+.btn:hover {
+  background-color: #ffffff;
+  outline: 1px solid var(--col-Prmy-mod);
+  color: var(--fcol-sec);
 }

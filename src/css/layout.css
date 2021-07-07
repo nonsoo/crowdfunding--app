@@ -87,5 +87,11 @@
 }
 
 .itemHeaderBtnContainer {
-  align-self: flex-start;
+  /* align-self: flex-start; */
+  display: flex;
+  justify-content: space-around;
+}
+
+.itemHeaderBtnContainer__btn:first-child {
+  margin-right: 3rem;
 }

@@ -16,7 +16,11 @@ const ItemHeaderComp = () => {
         A beautiful & handcrafted monitor stand to reduce neck and eye strain.
       </p>
       <div className="itemHeaderBtnContainer">
-        <Btn btnName="Back this Project" />
+        <Btn
+          btnName="Back this Project"
+          cssClass="itemHeaderBtnContainer__btn"
+        />
+        <Btn btnName="Bookmark" />
       </div>
     </section>
   );
