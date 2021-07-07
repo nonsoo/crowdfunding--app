@@ -34,8 +34,6 @@
 }
 
 .Funding--site {
-  max-width: 1400px;
-  min-width: 350px;
   width: 100%;
 
   font-size: var(--fs-prmy);
@@ -47,8 +45,12 @@
 }
 
 .mainContent {
+  max-width: 1400px;
+  min-width: 350px;
   margin: 0 auto;
   margin-top: 3rem;
   padding: 3rem;
   width: 100%;
+
+  border: 1px solid black;
 }
