@@ -15,4 +15,4 @@ Goal of the project is to build out a crowd funding product page that allows use
 
 install Node JS \
 npm run build \
-npm serve -g
+npm serve -s build
