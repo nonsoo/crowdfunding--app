@@ -6,6 +6,7 @@ const RewardsComp = ({
   pledgeAmount,
   rewardDescri,
   pledgeRemains,
+  BtnName,
 }) => {
   return (
     <div className="Rewards">
@@ -19,7 +20,7 @@ const RewardsComp = ({
           <span className="RewardsSelectors__Name--Bold">{pledgeRemains}</span>
           left
         </p>
-        <Btn btnName="Select Reward" cssClass="RewardsSelectors__Btn" />
+        <Btn btnName={BtnName} cssClass="RewardsSelectors__Btn" />
       </div>
     </div>
   );
