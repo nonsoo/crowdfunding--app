@@ -105,3 +105,29 @@
 .FundItems {
   padding: 0.75rem;
 }
+
+.FundtItems__Header {
+  font-size: var(--fs-tri);
+  font-weight: var(--fw-tri);
+  color: var(--fcol-sec);
+  text-align: center;
+
+  margin-bottom: 1rem;
+}
+
+.fundProgessContainer {
+  width: 100%;
+  height: 25px;
+
+  margin-top: 2rem;
+
+  background-color: var(--col-Neu-dark);
+  border-radius: 100px;
+}
+
+.fundProgessBar {
+  width: 60%;
+  height: 25px;
+  background-color: var(--col-Prmy-dark);
+  border-radius: 100px;
+}
