@@ -13,6 +13,6 @@ Goal of the project is to build out a crowd funding product page that allows use
 
 ### Run Commands
 
-install Node JS
-npm run build
+install Node JS \
+npm run build \
 npm serve -g
