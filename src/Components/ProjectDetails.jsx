@@ -3,6 +3,24 @@ import React from "react";
 import RewardsComp from "./InteractiveComp/RewardsComp";
 
 const ProjectDetails = () => {
+  const RewardsLst = [
+    {
+      id: 1,
+      rewardName: "Bamboo Stand",
+      pledgeAmount: "25",
+      descri: `You get an ergonomic stand made of natural bamboo. You've helped us launch 
+        our our promotional campaign and you will be added to the special backer list`,
+      pledgeRemains: 101,
+    },
+    {
+      id: 2,
+      rewardName: "Bamboo Stand",
+      pledgeAmount: "25",
+      descri: `You get an ergonomic stand made of natural bamboo. You've helped us launch 
+        our our promotional campaign and you will be added to the special backer list`,
+      pledgeRemains: 101,
+    },
+  ];
   return (
     <section className="mainPageComp">
       <div className="AboutSection">
@@ -21,7 +39,15 @@ const ProjectDetails = () => {
         </p>
       </div>
       <div className="RewardCompContainer">
-        <RewardsComp />
+        {RewardsLst.map((Reward) => (
+          <RewardsComp
+            key={Reward.id}
+            rewardName={Reward.rewardName}
+            pledgeAmount={Reward.pledgeAmount}
+            rewardDescri={Reward.descri}
+            pledgeRemains={Reward.pledgeRemains}
+          />
+        ))}
       </div>
     </section>
   );

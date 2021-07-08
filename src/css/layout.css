@@ -149,8 +149,15 @@
   color: var(--fcol-sec);
 }
 
+.RewardCompContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
 .Rewards {
-  width: 100%;
+  width: 80%;
   border: 1px solid var(--col-Neu-black);
   border-radius: 10px;
   box-shadow: var(--boxShadow);
