@@ -1,6 +1,8 @@
 import "./css/layout.css";
 import "./css/comp.css";
 
+import { MdClose } from "react-icons/md";
+
 import Header from "./Components/Header";
 import ItemHeaderComp from "./Components/ItemHeaderComp";
 import FundComp from "./Components/FundComp";
@@ -15,6 +17,11 @@ function App() {
         <ItemHeaderComp />
         <FundComp />
         <ProjectDetails />
+      </section>
+
+      <section className="showModal">
+        <MdClose />
+        <p>hellow world</p>
       </section>
     </div>
   );
