@@ -20,8 +20,12 @@ function App() {
       </section>
 
       <section className="showModal">
-        <MdClose />
-        <p>hellow world</p>
+        <MdClose className="showModal__close" />
+        <p className="showModal__Title">Back this project</p>
+        <p className="showModal__desci">
+          Want to support us in brining Mastercraft Bamboo Monitor Riser out to
+          the world?
+        </p>
       </section>
     </div>
   );
