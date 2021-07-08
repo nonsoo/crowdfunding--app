@@ -38,6 +38,8 @@
   /* other */
 
   --boxShadow-prmy: 0 3px 6px 1px rgba(23, 23, 23, 0.06);
+  --letterSpacingBody: 0.06rem;
+  --lineHeight: 1.75rem;
 }
 
 .Funding--site {
@@ -46,6 +48,7 @@
   font-size: var(--fs-prmy);
   font-family: var(--ff-prmy);
   font-weight: var(--fw-prmy);
+  line-height: var(--lineHeight);
 
   color: var(--fcol-tri);
   background-color: var(--background-col);
@@ -130,4 +133,16 @@
   height: 25px;
   background-color: var(--col-Prmy-dark);
   border-radius: 100px;
+}
+
+.AboutSection {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.AboutSection__Title {
+  font-size: var(--fs-sec);
+  font-weight: var(--fw-tri);
+  color: var(--fcol-sec);
 }

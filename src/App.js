@@ -4,6 +4,7 @@ import "./css/comp.css";
 import Header from "./Components/Header";
 import ItemHeaderComp from "./Components/ItemHeaderComp";
 import FundComp from "./Components/FundComp";
+import ProjectDetails from "./Components/ProjectDetails";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <section className="mainContent">
         <ItemHeaderComp />
         <FundComp />
+        <ProjectDetails />
       </section>
     </div>
   );
