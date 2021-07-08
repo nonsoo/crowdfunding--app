@@ -41,10 +41,10 @@
 
   background-color: var(--col-Prmy-mod);
   color: var(--fcol-prmy);
+  font-weight: var(--fw-tri);
 }
 
 .btn:hover {
-  background-color: #ffffff;
-  outline: 1px solid var(--col-Prmy-mod);
-  color: var(--fcol-sec);
+  background-color: var(--col-Prmy-dark);
+  transition: 0.45s;
 }

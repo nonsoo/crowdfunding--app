@@ -25,7 +25,7 @@ const ProjectDetails = () => {
       rewardName: "Mahogany Special Edition",
       pledgeAmount: "200",
       descri: `You get two Special Edition Mahogany stands, a Backer T-shirt, and a personal thank you.
-      You';; be added to our Backer member list.`,
+      You'll be added to our Backer member list.`,
       pledgeRemains: 0,
     },
   ];

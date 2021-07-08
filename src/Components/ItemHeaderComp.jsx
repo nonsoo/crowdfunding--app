@@ -20,7 +20,6 @@ const ItemHeaderComp = () => {
           btnName="Back this Project"
           cssClass="itemHeaderBtnContainer__btn"
         />
-        <Btn btnName="Bookmark" />
       </div>
     </section>
   );
