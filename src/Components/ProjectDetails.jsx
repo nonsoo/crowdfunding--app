@@ -1,5 +1,7 @@
 import React from "react";
 
+import RewardsComp from "./InteractiveComp/RewardsComp";
+
 const ProjectDetails = () => {
   return (
     <section className="mainPageComp">
@@ -17,6 +19,9 @@ const ProjectDetails = () => {
           extra desk space below your computer to allow notepads, pens, and USB
           sticks to be stored under the stand.
         </p>
+      </div>
+      <div className="RewardCompContainer">
+        <RewardsComp />
       </div>
     </section>
   );

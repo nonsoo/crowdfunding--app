@@ -139,10 +139,49 @@
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+
+  margin-bottom: 5rem;
 }
 
 .AboutSection__Title {
   font-size: var(--fs-sec);
   font-weight: var(--fw-tri);
   color: var(--fcol-sec);
+}
+
+.Rewards {
+  width: 100%;
+  border: 1px solid var(--col-Neu-black);
+  border-radius: 10px;
+  box-shadow: var(--boxShadow);
+
+  padding: 2rem;
+}
+
+.RewardsHeader {
+  display: flex;
+  justify-content: space-between;
+}
+
+.Rewards__Descri {
+  margin: 2rem 0;
+}
+.RewardsHeader__Name {
+  font-weight: var(--fw-tri);
+  color: var(--fcol-sec);
+}
+
+.RewardsSelectors__Name--Bold {
+  font-size: var(--fs-tri);
+  font-weight: var(--fw-tri);
+  color: var(--fcol-sec);
+}
+
+.RewardsHeader__Amount {
+  color: var(--col-Prmy-mod);
+}
+
+.RewardsSelectors {
+  display: flex;
+  justify-content: space-between;
 }
