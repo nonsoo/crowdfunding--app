@@ -9,6 +9,33 @@ import FundComp from "./Components/FundComp";
 import ProjectDetails from "./Components/ProjectDetails";
 
 function App() {
+  const RewardsLst = [
+    {
+      id: 1,
+      rewardName: "Bamboo Stand",
+      pledgeAmount: "25",
+      descri: `You get an ergonomic stand made of natural bamboo. You've helped us launch 
+        our our promotional campaign and you will be added to the special backer list.`,
+      pledgeRemains: 101,
+    },
+    {
+      id: 2,
+      rewardName: "Black Edition Stand",
+      pledgeAmount: "75",
+      descri: `You get a Black Special Edition computer stand and a personal thank you. You'll 
+      be added to our Backer member list. Shipping is included.`,
+      pledgeRemains: 64,
+    },
+    {
+      id: 3,
+      rewardName: "Mahogany Special Edition",
+      pledgeAmount: "200",
+      descri: `You get two Special Edition Mahogany stands, a Backer T-shirt, and a personal thank you.
+      You'll be added to our Backer member list.`,
+      pledgeRemains: 0,
+    },
+  ];
+
   return (
     <div className="Funding--site">
       <Header />
@@ -16,7 +43,7 @@ function App() {
       <section className="mainContent">
         <ItemHeaderComp />
         <FundComp />
-        <ProjectDetails />
+        <ProjectDetails RewardsLst={RewardsLst} />
       </section>
 
       <section className="showModal">

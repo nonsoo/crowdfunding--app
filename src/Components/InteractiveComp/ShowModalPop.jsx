@@ -11,6 +11,7 @@ const ShowModalPop = () => {
           </p>
           <p className="ShowModal__PledgeRemain">101 Left</p>
         </div>
+        <p className="ShowModalPop__descri"></p>
       </div>
     </div>
   );
