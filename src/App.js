@@ -8,6 +8,8 @@ import ItemHeaderComp from "./Components/ItemHeaderComp";
 import FundComp from "./Components/FundComp";
 import ProjectDetails from "./Components/ProjectDetails";
 
+import ShowModalPop from "./Components/InteractiveComp/ShowModalPop";
+
 function App() {
   const RewardsLst = [
     {
@@ -53,6 +55,17 @@ function App() {
           Want to support us in brining Mastercraft Bamboo Monitor Riser out to
           the world?
         </p>
+        <div className="ModalPopContainer">
+          {RewardsLst.map((Reward) => (
+            <ShowModalPop
+              key={Reward.id}
+              rewardName={Reward.rewardName}
+              pledgeAmount={Reward.pledgeAmount}
+              desci={Reward.descri}
+              pledgeRemain={Reward.pledgeRemains}
+            />
+          ))}
+        </div>
       </section>
     </div>
   );

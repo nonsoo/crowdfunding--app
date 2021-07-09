@@ -122,14 +122,14 @@
 
   margin-top: 2rem;
 
-  background-color: var(--col-Neu-dark);
+  background-color: var(--fcol-tri);
   border-radius: 100px;
 }
 
 .fundProgessBar {
   width: 60%;
   height: 25px;
-  background-color: var(--col-Prmy-dark);
+  background-color: var(--col-Prmy-mod);
   border-radius: 100px;
 }
 
@@ -217,6 +217,88 @@
   color: var(--fcol-sec);
 }
 
+.ModalPopContainer {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.ShowModalPopContainer {
+  border: 1px solid var(--col-Neu-dark);
+  border-radius: 10px;
+}
+
+.ShowModalPop,
+.EnterPledge {
+  display: flex;
+  gap: 1.25rem;
+
+  padding: 2rem;
+}
+
+.EnterPledge {
+  justify-content: space-between;
+  align-items: baseline;
+  border-top: 1px solid var(--col-Neu-dark);
+}
+
+.EnterPledge__fieldCon {
+  display: flex;
+  /* gap: 1rem; */
+  justify-content: space-between;
+}
+
+.EnterPledge__FieldText {
+  border: 1px solid var(--col-Neu-dark);
+
+  padding: 2em 3em;
+
+  border-radius: 4em;
+  width: 30%;
+}
+
+.ShowModalPop__Circle {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+
+  border: 1px solid var(--col-Neu-dark);
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+}
+
+.ShowModalPop__Circle--fill {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+
+  background-color: var(--col-Prmy-mod);
+}
+
+.ShowModalPop__NameCon {
+  display: flex;
+  justify-content: space-between;
+}
+
+.ShowModalPop__Name {
+  color: var(--fcol-sec);
+  font-weight: var(--fw-tri);
+}
+
+.ShowModalPop__Name span {
+  color: var(--col-Prmy-mod);
+  margin-left: 1.25rem;
+  font-weight: var(--fw-sec);
+}
+
+.ShowModal__PledgeRemain span {
+  font-weight: var(--fw-tri);
+  color: var(--fcol-sec);
+}
+
 @media screen and (max-width: 800px) {
   .FundComp {
     flex-direction: column;
@@ -237,5 +319,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+
+  .EnterPledge {
+    flex-direction: column;
   }
 }
