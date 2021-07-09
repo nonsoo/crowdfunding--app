@@ -22,7 +22,7 @@ const ShowModalPop = ({ rewardName, pledgeAmount, pledgeRemain, desci }) => {
         </div>
       </div>
       <div className="EnterPledge">
-        <p className="EnterPledge__Title">Enter Pledge</p>
+        <p className="EnterPledge__Title">Enter your pledge</p>
         <form className="EnterPledge__fieldCon">
           <input type="text" className="EnterPledge__FieldText" />
           <Btn btnName="Continue" />
