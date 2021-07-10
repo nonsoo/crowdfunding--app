@@ -1,7 +1,7 @@
 import "./css/layout.css";
 import "./css/comp.css";
 
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { MdClose } from "react-icons/md";
 
 import Header from "./Components/Header";
@@ -10,6 +10,8 @@ import FundComp from "./Components/FundComp";
 import ProjectDetails from "./Components/ProjectDetails";
 
 import ShowModalPop from "./Components/InteractiveComp/ShowModalPop";
+
+import { onShowModal } from "./redux/ducks/ShowModals";
 
 function App() {
   const RewardsLst = [
@@ -40,6 +42,8 @@ function App() {
   ];
 
   const showModal = useSelector((state) => state.showModalReducers.showModal);
+
+  const dispatch = useDispatch();
   return (
     <div className="Funding--site">
       <Header />
@@ -50,24 +54,31 @@ function App() {
         <ProjectDetails RewardsLst={RewardsLst} />
       </section>
 
-      <section className={`${showModal ? "showModal" : "hide"}`}>
-        <MdClose className="showModal__close" />
-        <p className="showModal__Title">Back this project</p>
-        <p className="showModal__desci">
-          Want to support us in brining Mastercraft Bamboo Monitor Riser out to
-          the world?
-        </p>
-        <div className="ModalPopContainer">
-          {RewardsLst.map((Reward) => (
-            <ShowModalPop
-              key={Reward.id}
-              rewardName={Reward.rewardName}
-              pledgeAmount={Reward.pledgeAmount}
-              desci={Reward.descri}
-              pledgeRemain={Reward.pledgeRemains}
-            />
-          ))}
-        </div>
+      <section
+        className={`${showModal ? "showModalContainerBackground" : "hide"}`}
+      >
+        <section className="showModal">
+          <MdClose
+            className="showModal__close"
+            onClick={() => dispatch(onShowModal())}
+          />
+          <p className="showModal__Title">Back this project</p>
+          <p className="showModal__desci">
+            Want to support us in brining Mastercraft Bamboo Monitor Riser out
+            to the world?
+          </p>
+          <div className="ModalPopContainer">
+            {RewardsLst.map((Reward) => (
+              <ShowModalPop
+                key={Reward.id}
+                rewardName={Reward.rewardName}
+                pledgeAmount={Reward.pledgeAmount}
+                desci={Reward.descri}
+                pledgeRemain={Reward.pledgeRemains}
+              />
+            ))}
+          </div>
+        </section>
       </section>
     </div>
   );

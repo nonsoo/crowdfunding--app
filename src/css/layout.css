@@ -196,6 +196,19 @@
   justify-content: space-between;
 }
 
+.showModalContainerBackground {
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+
+  display: grid;
+  place-items: center;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
 .showModal {
   width: 100%;
   max-width: 900px;
@@ -213,6 +226,8 @@
 .showModal__close {
   align-self: flex-end;
   font-size: var(--fs-sec);
+
+  cursor: pointer;
 }
 
 .showModal__Title {
