@@ -11,7 +11,6 @@ const initalState = {
 export default function showModalReducer(state = initalState, action) {
   switch (action.type) {
     case SHOWMODAL:
-      console.log("I am using the redux store");
       return { ...state, showModal: !state.showModal };
     default:
       return state;
