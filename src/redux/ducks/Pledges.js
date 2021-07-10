@@ -15,8 +15,7 @@ const initalState = {
 export default function PledgeReducer(state = initalState, action) {
   switch (action.type) {
     case PLEDGESUBMIT:
-      console.log(action.payload);
-      return { ...state, pledge: action.payload };
+      return { ...state, pledge: state.pledge + parseInt(action.payload) };
     default:
       return state;
   }
