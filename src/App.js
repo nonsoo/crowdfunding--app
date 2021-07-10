@@ -1,6 +1,7 @@
 import "./css/layout.css";
 import "./css/comp.css";
 
+import { useSelector } from "react-redux";
 import { MdClose } from "react-icons/md";
 
 import Header from "./Components/Header";
@@ -38,6 +39,7 @@ function App() {
     },
   ];
 
+  const showModal = useSelector((state) => state.showModalReducers.showModal);
   return (
     <div className="Funding--site">
       <Header />
@@ -48,7 +50,7 @@ function App() {
         <ProjectDetails RewardsLst={RewardsLst} />
       </section>
 
-      <section className="showModal">
+      <section className={`${showModal ? "showModal" : "hide"}`}>
         <MdClose className="showModal__close" />
         <p className="showModal__Title">Back this project</p>
         <p className="showModal__desci">

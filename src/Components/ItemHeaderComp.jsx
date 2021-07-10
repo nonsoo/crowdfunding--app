@@ -9,6 +9,7 @@ import { onShowModal } from "../redux/ducks/ShowModals";
 
 const ItemHeaderComp = () => {
   const dispatch = useDispatch();
+
   return (
     <section className="itemHeaderComp mainPageComp">
       <img
