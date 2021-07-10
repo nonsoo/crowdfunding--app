@@ -1,6 +1,6 @@
 import "./css/layout.css";
 import "./css/comp.css";
-
+import { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { MdClose } from "react-icons/md";
 
@@ -14,7 +14,7 @@ import ShowModalPop from "./Components/InteractiveComp/ShowModalPop";
 import { onShowModal } from "./redux/ducks/ShowModals";
 
 function App() {
-  const RewardsLst = [
+  const [RewardsLst, setRewardsLst] = useState([
     {
       id: 1,
       rewardName: "Bamboo Stand",
@@ -39,8 +39,23 @@ function App() {
       You'll be added to our Backer member list.`,
       pledgeRemains: 0,
     },
-  ];
+  ]);
 
+  // const decrementRemains = (id) => {
+  //   //check if the id that was entered is the same as the lst id
+  //   // then set the new remains
+
+  //   setRewardsLst(
+  //     RewardsLst.filter((reward) => {
+  //       if (reward.id === id) {
+  //         return console.log(reward.pledgeRemains);
+  //         // reward.pledgeRemains:pledgeRemains - 1
+  //       }
+  //     })
+  //   );
+  // };
+
+  // decrementRemains(2);
   const showModal = useSelector((state) => state.showModalReducers.showModal);
 
   const dispatch = useDispatch();
@@ -68,6 +83,10 @@ function App() {
             to the world?
           </p>
           <div className="ModalPopContainer">
+            <ShowModalPop
+              rewardName="Pledge with no Reward"
+              descri="Choose to support us without if you simply believe in our project."
+            />
             {RewardsLst.map((Reward) => (
               <ShowModalPop
                 key={Reward.id}
