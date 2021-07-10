@@ -6,12 +6,14 @@ export const pledgeSubmit = (pledge) => ({
 });
 
 const initalState = {
-  pledge: 0,
+  pledge: 30000,
+  totalPledge: 100000,
 };
 
 export default function PledgeReducer(state = initalState, action) {
   switch (action.type) {
     case PLEDGESUBMIT:
+      console.log(action.payload);
       return { ...state, pledge: action.payload };
     default:
       return state;
