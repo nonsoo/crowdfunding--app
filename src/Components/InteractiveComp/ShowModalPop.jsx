@@ -6,6 +6,7 @@ import { useState } from "react";
 
 const ShowModalPop = ({ rewardName, pledgeAmount, pledgeRemain, desci }) => {
   const [selectPopupModule, setSelectPopupModule] = useState(false);
+  const [enteredPledge, setEnteredPledge] = useState("");
 
   const onSelectPopupModule = () => {
     setSelectPopupModule(!selectPopupModule);
@@ -33,7 +34,12 @@ const ShowModalPop = ({ rewardName, pledgeAmount, pledgeRemain, desci }) => {
       <div className={selectPopupModule ? "EnterPledge" : "hide"}>
         <p className="EnterPledge__Title">Enter your pledge</p>
         <form className="EnterPledge__fieldCon">
-          <input type="text" className="EnterPledge__FieldText" />
+          <input
+            type="text"
+            value={enteredPledge}
+            onChange={(e) => setEnteredPledge(e.target.value)}
+            className="EnterPledge__FieldText"
+          />
           <Btn btnName="Continue" />
         </form>
       </div>
