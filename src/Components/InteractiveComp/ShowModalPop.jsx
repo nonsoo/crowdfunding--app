@@ -2,12 +2,21 @@ import React from "react";
 
 import Btn from "./Btn";
 
+import { useState } from "react";
+
 const ShowModalPop = ({ rewardName, pledgeAmount, pledgeRemain, desci }) => {
+  const [selectPopupModule, setSelectPopupModule] = useState(false);
+
+  const onSelectPopupModule = () => {
+    setSelectPopupModule(!selectPopupModule);
+  };
   return (
     <section className="ShowModalPopContainer">
-      <div className="ShowModalPop">
+      <div className="ShowModalPop" onClick={() => onSelectPopupModule()}>
         <div className="ShowModalPop__Circle">
-          <div className="ShowModalPop__Circle--fill"></div>
+          <div
+            className={`${selectPopupModule && "ShowModalPop__Circle--fill"}`}
+          ></div>
         </div>
         <div className="ShowModalPop__ContentContainer">
           <div className="ShowModalPop__NameCon">
@@ -21,7 +30,7 @@ const ShowModalPop = ({ rewardName, pledgeAmount, pledgeRemain, desci }) => {
           <p className="ShowModalPop__descri">{desci}</p>
         </div>
       </div>
-      <div className="EnterPledge">
+      <div className={selectPopupModule ? "EnterPledge" : "hide"}>
         <p className="EnterPledge__Title">Enter your pledge</p>
         <form className="EnterPledge__fieldCon">
           <input type="text" className="EnterPledge__FieldText" />
