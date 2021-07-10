@@ -8,6 +8,8 @@ export const pledgeSubmit = (pledge) => ({
 const initalState = {
   pledge: 30000,
   totalPledge: 100000,
+  backers: 4000,
+  daysLeft: 56,
 };
 
 export default function PledgeReducer(state = initalState, action) {
