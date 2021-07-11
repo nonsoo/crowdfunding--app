@@ -16,6 +16,12 @@ const ShowModalPop = ({ rewardName, pledgeAmount, pledgeRemain, desci }) => {
 
   const onSubmitPledge = (e) => {
     e.preventDefault();
+
+    //check whether the char entered is a valid number
+    if (!parseInt(enteredPledge)) {
+      alert("Please enter a valid pledge");
+      return;
+    }
     dispatch(pledgeSubmit(enteredPledge));
   };
 
