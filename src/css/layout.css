@@ -324,6 +324,44 @@
   color: var(--fcol-sec);
 }
 
+.Thankyou {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+
+  padding: 3rem;
+
+  background-color: var(--background-col-sec);
+  box-shadow: var(--boxShadow-prmy);
+  border-radius: 10px;
+
+  width: 60%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.Thankyou__Img {
+  width: 10%;
+  min-width: 100px;
+  height: auto;
+}
+
+.Thankyou__Title {
+  font-size: var(--fs-tri);
+  color: var(--fcol-sec);
+  font-weight: var(--fw-tri);
+
+  text-align: center;
+}
+
+.Thankyou__descri {
+  min-width: 200px;
+  width: 40%;
+  text-align: center;
+}
+
 @media screen and (max-width: 800px) {
   .FundComp {
     flex-direction: column;

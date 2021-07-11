@@ -8,6 +8,7 @@ import Header from "./Components/Header";
 import ItemHeaderComp from "./Components/ItemHeaderComp";
 import FundComp from "./Components/FundComp";
 import ProjectDetails from "./Components/ProjectDetails";
+import Thankyou from "./Components/Thankyou";
 
 import ShowModalPop from "./Components/InteractiveComp/ShowModalPop";
 
@@ -85,7 +86,7 @@ function App() {
           <div className="ModalPopContainer">
             <ShowModalPop
               rewardName="Pledge with no Reward"
-              descri="Choose to support us without if you simply believe in our project."
+              desci="Choose to support us without a reward if you simply believe in our project. As a backer, you'll be signed up to receive product updates via email. "
             />
             {RewardsLst.map((Reward) => (
               <ShowModalPop
@@ -99,6 +100,8 @@ function App() {
           </div>
         </section>
       </section>
+
+      <Thankyou />
     </div>
   );
 }
