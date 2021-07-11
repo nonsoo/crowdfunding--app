@@ -16,3 +16,7 @@ Goal of the project is to build out a crowd funding product page that allows use
 install Node JS \
 npm run build \
 npm serve -s build
+
+
+--- 
+Live demo available at [Live Demo](https://crowfund-mastercraft.netlify.app)
