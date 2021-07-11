@@ -6,7 +6,7 @@ export const pledgeSubmit = (pledge) => ({
 });
 
 const initalState = {
-  pledge: 70000,
+  pledge: 20000,
   totalPledge: 100000,
   backers: 4000,
   daysLeft: 56,
