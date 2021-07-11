@@ -36,10 +36,18 @@ const ShowModalPop = ({ rewardName, pledgeAmount, pledgeRemain, desci }) => {
         <div className="ShowModalPop__ContentContainer">
           <div className="ShowModalPop__NameCon">
             <p className="ShowModalPop__Name">
-              {rewardName} <span>Pledge ${pledgeAmount} or more</span>
+              {rewardName}{" "}
+              <span className={`${pledgeAmount === null ? "hide" : ""}`}>
+                Pledge ${pledgeAmount} or more
+              </span>
             </p>
-            <p className="ShowModal__PledgeRemain">
-              <span>{pledgeRemain}</span> left
+            <p
+              className={`${
+                pledgeRemain === null ? "hide" : "ShowModal__PledgeRemain"
+              }`}
+            >
+              <span>{pledgeRemain} </span>
+              left
             </p>
           </div>
           <p className="ShowModalPop__descri">{desci}</p>
@@ -62,3 +70,8 @@ const ShowModalPop = ({ rewardName, pledgeAmount, pledgeRemain, desci }) => {
 };
 
 export default ShowModalPop;
+
+ShowModalPop.defaultProps = {
+  pledgeRemain: null,
+  pledgeAmount: null,
+};
