@@ -19,4 +19,4 @@ npm serve -s build
 
 
 --- 
-Live demo available at [Live Demo](https://crowfund-mastercraft.netlify.app)
+Live demo available at [Master Craft Live Demo](https://crowfund-mastercraft.netlify.app)
