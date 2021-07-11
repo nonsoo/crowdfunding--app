@@ -9,9 +9,14 @@ const ShowModalPop = ({ rewardName, pledgeAmount, pledgeRemain, desci }) => {
 
   const [selectPopupModule, setSelectPopupModule] = useState(false);
   const [enteredPledge, setEnteredPledge] = useState("");
+  const [pledgeRemainsState, setPledgeRemainsState] = useState(pledgeRemain);
 
   const onSelectPopupModule = () => {
     setSelectPopupModule(!selectPopupModule);
+  };
+
+  const decrementRemains = () => {
+    setPledgeRemainsState(pledgeRemainsState - 1);
   };
 
   const onSubmitPledge = (e) => {
@@ -22,6 +27,8 @@ const ShowModalPop = ({ rewardName, pledgeAmount, pledgeRemain, desci }) => {
       alert("Please enter a valid pledge");
       return;
     }
+
+    decrementRemains();
     dispatch(pledgeSubmit(enteredPledge));
   };
 
@@ -46,7 +53,7 @@ const ShowModalPop = ({ rewardName, pledgeAmount, pledgeRemain, desci }) => {
                 pledgeRemain === null ? "hide" : "ShowModal__PledgeRemain"
               }`}
             >
-              <span>{pledgeRemain} </span>
+              <span>{pledgeRemainsState} </span>
               left
             </p>
           </div>
