@@ -3,7 +3,13 @@ import Btn from "./InteractiveComp/Btn";
 
 import companyLogo from "../imgs/logo-mastercraft.svg";
 
+import { useDispatch } from "react-redux";
+
+import { onShowModal } from "../redux/ducks/ShowModals";
+
 const ItemHeaderComp = () => {
+  const dispatch = useDispatch();
+
   return (
     <section className="itemHeaderComp mainPageComp">
       <img
@@ -19,6 +25,7 @@ const ItemHeaderComp = () => {
         <Btn
           btnName="Back this Project"
           cssClass="itemHeaderBtnContainer__btn"
+          onToggle={() => dispatch(onShowModal())}
         />
       </div>
     </section>
