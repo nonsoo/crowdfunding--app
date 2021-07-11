@@ -132,6 +132,8 @@
 
 .fundProgessBar {
   width: var(--widthProgess);
+  max-width: 100%;
+  min-width: 0%;
   height: 25px;
   background-color: var(--col-Prmy-mod);
   border-radius: 100px;
