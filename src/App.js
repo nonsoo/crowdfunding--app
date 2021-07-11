@@ -7,7 +7,7 @@ import Header from "./Components/Header";
 import ItemHeaderComp from "./Components/ItemHeaderComp";
 import FundComp from "./Components/FundComp";
 import ProjectDetails from "./Components/ProjectDetails";
-import Thankyou from "./Components/Thankyou";
+// import Thankyou from "./Components/Thankyou";
 
 import ShowModalPop from "./Components/InteractiveComp/ShowModalPop";
 
@@ -85,7 +85,7 @@ function App() {
         </section>
       </section>
 
-      <Thankyou />
+      {/* <Thankyou /> */}
     </div>
   );
 }
